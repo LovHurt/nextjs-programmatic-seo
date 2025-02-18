@@ -8,7 +8,7 @@ const geistSans = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "Restaurant Finder",
+  title: "Restaurant Looker",
   description: "Find the best restaurants near you",
 };
 

@@ -10,7 +10,7 @@ export default async function Home() {
         <div className="relative h-96 w-full">
           <Image
             src={banner}
-            alt="Restaurant Finder"
+            alt="Restaurant Looker"
             layout="fill"
             objectFit="cover"
             className="rounded-lg"
