@@ -343,7 +343,7 @@ const restaurants: Restaurant[] = [
     id: 24,
     name: "Anatolia Lezzet Berlin",
     image:
-      "https://www.freepik.com/free-photo/morning-breakfast-set-by-window_7875082.htm#fromView=search&page=1&position=4&uuid=2e91f8b6-769f-43ca-8323-366db478cbe6&query=turkish+dinner",
+      "https://img.freepik.com/free-photo/morning-breakfast-set-by-window_140725-9917.jpg?t=st=1739866381~exp=1739869981~hmac=eca71dfcc3aa94fcb173ee302348bdb1b5ae9dc21e4af93a4c2bb398f752dbcc&w=740",
     rating: 4.8,
     price: "$$",
     cuisine: "Turkish",
@@ -395,7 +395,7 @@ export async function searchRestaurants(q: string, location: string) {
 export const locations = [
   "Berlin",
   "Hamburg",
-  "Münih",
+  "Munich",
   "Frankfurt",
   "Köln"
 ];
