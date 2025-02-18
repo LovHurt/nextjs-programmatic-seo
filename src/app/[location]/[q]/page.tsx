@@ -1,12 +1,33 @@
 import Header from "@/components/Header";
 import RestaurantItem from "@/components/RestaurantItem";
-import { searchRestaurants } from "@/data/restaurants";
+import { getAllTags, locations, searchRestaurants } from "@/data/restaurants";
 import { Metadata } from "next";
 import { cache } from "react";
 
 interface PageProps {
   params: Promise<{ location: string; q: string }>;
 }
+
+//this static render things only work at COMPILE TIME so when we do npm run build (not npm run dev)
+
+export const revalidate = 86400; //Refresh cached pages once every 24 hours
+
+export async function generateStaticParams() {
+    const allTags = await getAllTags({ 
+        //if we have many pages we can render this much of it at compile-time
+        //the rest will be rendered & cached at first access
+        //limit:10
+     });
+
+    return allTags.map(tag => locations.map(location => ({
+        location, q:tag
+    }))).flat();
+
+    //instead of this we can in this function: 
+    //return []; 
+    //thus only the first user, who opened the page, would wait for the render, 
+    //the second and the other users will take the serverside RENDERED page, so they wont wait that long
+} 
 
 const getRestaurants = cache(searchRestaurants);
 
