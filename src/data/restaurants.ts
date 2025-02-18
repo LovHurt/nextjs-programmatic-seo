@@ -367,6 +367,20 @@ const restaurants: Restaurant[] = [
     reviews: 128,
     tags: ["Lunch", "Dinner", "Turkish"],
   },
+  {
+    id: 25,
+    name: "Ordu Homemade Food Köln",
+    image:
+      "https://img.freepik.com/free-photo/turkish-soup-kuru-fasulye-with-herbs-spices_114579-4547.jpg?ga=GA1.1.2042092471.1739862194&semt=ais_hybrid",
+    rating: 5.2,
+    price: "$$$",
+    cuisine: "Turkish",
+    address: "Schanzenviertel 25, 50895 Köln",
+    phone: "+49 52 525252",
+    hours: "11:00 - 23:00",
+    reviews: 152,
+    tags: ["Lunch", "Dinner", "Turkish", "Fasulye"],
+  },
 ];
 
 export async function searchRestaurants(q: string, location: string) {
